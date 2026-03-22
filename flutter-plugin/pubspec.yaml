@@ -1,0 +1,26 @@
+name: consent_sdk
+description: A Flutter plugin for the Consent Popup SDK. Provides a drop-in consent popup UI with purpose management, language switching, and theme customization.
+version: 1.0.0
+homepage: https://github.com/niceoneconsent/consent-sdk
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.niceoneconsent.sdk.flutter
+        pluginClass: ConsentPlugin
+      ios:
+        pluginClass: ConsentPlugin
