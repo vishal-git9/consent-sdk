@@ -34,14 +34,10 @@ android {
     }
 }
 
-repositories {
-    mavenLocal()
-    google()
-    mavenCentral()
-}
+
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:2.1.0"
-    implementation "com.niceoneconsent:android-sdk:1.0.0"
+    implementation 'com.github.vishal-git9.consent-sdk:android-sdk:1.0.0'
 }

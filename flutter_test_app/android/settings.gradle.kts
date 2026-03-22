@@ -8,19 +8,25 @@ pluginManagement {
             flutterSdkPath
         }
 
-dependencyResolutionManagement {
-    versionCatalogs {
-        create("libs") {
-            from(files("../../gradle/libs.versions.toml"))
-        }
-    }
-}
     includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
 
     repositories {
         google()
         mavenCentral()
         gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+    versionCatalogs {
+        create("libs") {
+            from(files("../../gradle/libs.versions.toml"))
+        }
     }
 }
 
@@ -31,7 +37,3 @@ plugins {
 }
 
 include(":app")
-include(":android-sdk")
-project(":android-sdk").projectDir = File("../../android-sdk")
-include(":core")
-project(":core").projectDir = File("../../core")

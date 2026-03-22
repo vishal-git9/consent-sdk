@@ -14,12 +14,7 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
+
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
@@ -52,6 +47,5 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation project(':android-sdk')
-    implementation project(':core')
+    implementation 'com.github.vishal-git9.consent-sdk:android-sdk:1.0.0'
 }
