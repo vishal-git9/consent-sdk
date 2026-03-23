@@ -1,6 +1,7 @@
 import Foundation
 import React
-
+import SwiftUI
+import ConsentSDK
 /// React Native native module for iOS.
 ///
 /// Bridges JavaScript API calls to the iOS Consent SDK.

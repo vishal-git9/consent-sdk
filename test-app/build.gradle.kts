@@ -38,9 +38,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":core"))
-    implementation(project(":android-sdk"))
-
+    implementation("com.github.vishal-git9.consent-sdk:android-sdk:1.0.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.lifecycle.runtime.ktx)
